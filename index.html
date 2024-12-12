@@ -4,19 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Gallery</title>
-</head>
-<body>
   <style>
- body {
-      font-family: 'Georgia', serif; 
-      background-color: #f5f3e5; 
-      color: #4b3e33; 
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f5f3e5;
+      color: #4b3e33;
       margin: 0;
       padding: 0;
       line-height: 1.6;
     }
 
-    
     .gallery {
       text-align: center;
       padding: 40px;
@@ -24,14 +21,13 @@
 
     .gallery h1 {
       font-size: 48px;
-      color: #6b4f3c; 
+      color: #6b4f3c;
       text-transform: uppercase;
       font-weight: bold;
       margin-bottom: 40px;
       letter-spacing: 3px;
     }
 
-    
     .gallery-container {
       display: flex;
       flex-wrap: wrap;
@@ -39,7 +35,6 @@
       gap: 20px;
     }
 
-   
     .gallery-item {
       width: 280px;
       background-color: #fff;
@@ -66,22 +61,20 @@
     .gallery-item p {
       padding: 15px;
       font-size: 18px;
-      background-color: #f8f1e1; 
+      background-color: #f8f1e1;
       margin: 0;
       font-weight: bold;
     }
 
-    
     .gallery-item:hover {
-      transform: scale(1.05); 
+      transform: scale(1.05);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
 
     .gallery-item:hover .gallery-img {
-      opacity: 0.8; 
+      opacity: 0.8;
     }
 
-    
     @media (max-width: 768px) {
       .gallery-container {
         flex-direction: column;
@@ -96,23 +89,51 @@
         font-size: 36px;
       }
     }
+
+    /* Button Styles */
+    button {
+      font-size: 16px;
+      padding: 12px 25px;
+      background: linear-gradient(135deg, #6b4f3c, #f8f1e1); 
+      border: none;
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-family: 'Georgia', serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    button:hover {
+      transform: scale(1.1); 
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(135deg, #f8f1e1, #6b4f3c); 
+    }
+
+    button:focus {
+      outline: none; 
+    }
+
+    button:active {
+      transform: scale(1.05); 
+    }
   </style>
+</head>
+<body>
 
   <section class="gallery">
     <h1>My Project Gallery</h1>
-    
-    
+
     <div class="gallery-container">
-     
       <div class="gallery-item">
-        <a href="https://sites.google.com/view/myfirstweb-blog/home
-        " target="_blank">
+        <a href="https://sites.google.com/view/myfirstweb-blog/home" target="_blank">
           <img src="https://drive.google.com/thumbnail?id=1chEzJN8jcZx-P5UIyy1PcIHIfukpb8nX" alt="Project 1" class="gallery-img">
           <p>Project 1</p>
         </a>
       </div>
 
-      
       <div class="gallery-item">
         <a href="https://sites.google.com/view/mypersonal-webproj2/home" target="_blank">
           <img src="https://drive.google.com/thumbnail?id=1SXnE6zTGBJbqppmm3ygtfrWKAfHECA23" alt="Project 2" class="gallery-img">
@@ -120,7 +141,6 @@
         </a>
       </div>
 
-     
       <div class="gallery-item">
         <a href="https://sites.google.com/view/netflix-proj3/home" target="_blank">
           <img src="https://drive.google.com/thumbnail?id=1BN3FRFknlRxjpwIE9BMD8hceKXGLRiRI" alt="Project 3" class="gallery-img">
@@ -128,7 +148,6 @@
         </a>
       </div>
 
-      
       <div class="gallery-item">
         <a href="https://sites.google.com/view/charity-proj4/home" target="_blank">
           <img src="https://drive.google.com/thumbnail?id=1ifTehlidL8SBGmgZ5Xwz72YsB7_7Dbyq" alt="Project 4" class="gallery-img">
@@ -149,7 +168,16 @@
           <p>Project 6</p>
         </a>
       </div>
+
       
+      <button onclick="goHome()">Back to Home</button>
+
+      <script>
+        
+        function goHome() {
+          window.location.href = 'https://sites.google.com/view/myhomiee/home'; 
+        }
+      </script>
     </div>
   </section>
 
